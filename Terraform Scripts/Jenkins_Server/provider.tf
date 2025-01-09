@@ -1,20 +1,40 @@
-terraform {
+teterraform {
   required_version = "~> 1.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0" # Optional but recommended in production
+      version = "~> 5.0" # Optional but recommended in production
     }
   }
 
   backend "s3" {
-    bucket         = "project-register"
-    key            = "jenkins/terraform.tfstate"
-    region         = "us-east-2"
+    bucket = "project-register-2025"
+    key    = "jenkins/terraform.tfstate"
+    region = "us-east-2"
 
   }
 }
 
+resources "aws_dynamodb_table" "tf_lock" {
+  name          = "terraform-lock"
+  hash_key      = "LockID"
+  read_capacity = 3
+  write_capacity = 3
+  attribute {
+    name = "lokedID"
+    type = "S"
+  }
+  tags = {
+    Name = "Terraform Lock Table"  #to destroy, add flag --lock=false
+  }
+  lifecycle {
+    prevent_destory = true # to destroy, change to false
+  }
+}
+
+
 provider "aws" {
   region = "us-east-2"
 }
+
+
