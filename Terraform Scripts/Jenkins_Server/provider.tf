@@ -28,7 +28,7 @@ resource "aws_dynamodb_table" "tf_lock" {
     Name = "Terraform Lock Table"  #to destroy, add flag --lock=false
   }
   lifecycle {
-    prevent_destory = true # to destroy, change to false
+    prevent_destroy = true # to destroy, change to false
   }
 }
 
