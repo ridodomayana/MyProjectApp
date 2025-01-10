@@ -11,3 +11,8 @@ data "aws_ami" "rhel_9" {
     values = ["rhel9"]
   }
 }
+  filter {
+    name   = "virtualization_type"
+    values = ["hvm:ebs-ssd"]
+  }
+}
