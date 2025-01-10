@@ -21,7 +21,7 @@ resource "aws_dynamodb_table" "tf_lock" {
   read_capacity = 3
   write_capacity = 3
   attribute {
-    name = "lokedID"
+    name = "LockID"
     type = "S"
   }
   tags = {
