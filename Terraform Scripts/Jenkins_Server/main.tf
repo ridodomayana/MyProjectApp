@@ -53,7 +53,7 @@ resource "aws_instance" "rhel9_server" {
   subnet_id     = aws_subnet.main_subnet.id
   key_name      = var.key_pair_name
 
-  security_groups = [
+  security_group_ids = [
     aws_security_group.rhel9_sg.name
   ]
 
