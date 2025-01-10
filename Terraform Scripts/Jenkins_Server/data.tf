@@ -2,20 +2,16 @@ data "aws_ami" "rhel9" {
   most_recent = true
 
   filter {
-    name   = "owner-alias" 
-    values = ["RHEL9-Server"]
-  }
-
-  filter {
     name   = "name"
-    values = ["RHEL-9"]
+    values = ["RHEL-9-*"] # Matches AMIs with RHEL 9 in the name
   }
 
   filter {
-    name   = "virtualization_type"
-    values = ["hvm:ebs-ssd"]
+    name   = "owner-id"
+    values = ["309956199498"] # Red Hat official AWS account ID
   }
 }
+
 
 
 
