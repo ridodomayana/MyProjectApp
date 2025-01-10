@@ -54,7 +54,7 @@ resource "aws_instance" "rhel9_server" {
   key_name      = var.key_pair_name
 
   security_group_ids = [
-    aws_security_group.rhel9_sg.name
+    aws_security_group.rhel9_sg.id
   ]
 
   tags = {
