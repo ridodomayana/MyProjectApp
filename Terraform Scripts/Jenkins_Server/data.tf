@@ -1,4 +1,4 @@
-data "aws_ami" "rhel8_server" {
+data "aws_ami" "rhel9_server" {
   most_recent = true
 
   filter {
@@ -8,6 +8,6 @@ data "aws_ami" "rhel8_server" {
 
   filter {
     name   = "name"
-    values = ["rhel8"]
+    values = ["rhel9"]
   }
 }
