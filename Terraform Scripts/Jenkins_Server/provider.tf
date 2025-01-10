@@ -1,3 +1,16 @@
+provider "aws" {
+  region = var.aws_region
+}
+
+
+
+
+
+
+
+
+
+
 teterraform {
   required_version = "~> 1.0"
   required_providers {
