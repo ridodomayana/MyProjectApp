@@ -1,9 +1,9 @@
-data "aws_ami" "rhel9_server" {
+data "aws_ami" "rhel_9" {
   most_recent = true
 
   filter {
     name   = "owner-alias" 
-    values = ["amazon"]
+    values = ["rhel_9"]
   }
 
   filter {
