@@ -1,16 +1,16 @@
-data "aws_ami" "rhel_9" {
+data "aws_ami" "rhel9" {
   most_recent = true
 
   filter {
     name   = "owner-alias" 
-    values = ["rhel_9"]
+    values = ["RHEL9-Server"]
   }
 
   filter {
     name   = "name"
-    values = ["rhel9"]
+    values = ["RHEL-9"]
   }
-}
+
   filter {
     name   = "virtualization_type"
     values = ["hvm:ebs-ssd"]
