@@ -6,6 +6,7 @@ terraform {
       version = "~> 4.0" # Optional but recommended in production
     }
   }
+}
 
   backend "s3" {
     bucket = "project-register"
@@ -17,5 +18,4 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-}
 }
