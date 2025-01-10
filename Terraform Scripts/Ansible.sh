@@ -11,15 +11,16 @@ PasswordAUthentication yes
 
 systemctl reload sshd
 
-switch user to ansadmin
 
------------------------------------
+----------------------
+switch user to ansadmin
 create the keygen to map ansadmin to host
 ssh-keygen
 
 ls .ssh
 
 -----------------------------------
+switch to back to root
 Install Ansible to the main-root user account
 amazon-linux-extras install ansible2
 ------------------------------------
@@ -30,9 +31,9 @@ Manage Jenkins --> System ----> Publish over ssh
 Configure ssh server
 
 ------------------------------------------------
-Install Docker in Ansible Server
+Install Docker in Ansadmin
 
-(Dp below actions Inside ansadmin)
+(D0 below actions Inside ansadmin)
 cd /opt
 create dir docker (mkdir docker)
 change ownership to ansadmin (sudo chown ansadmin:ansadmin docker)
