@@ -19,6 +19,7 @@ output "rhel9_ami_id" {
 }
 
 
+##################################
 
 
 
@@ -27,7 +28,7 @@ data "aws_ami" "rhel9" {
 
   filter {
     name   = "name"
-    values = ["RHEL-9-*"] # Matches AMIs with RHEL 9 in the name
+    values = ["RHEL-9*"] # Matches AMIs with RHEL 9 in the name
   }
 
   filter {
