@@ -6,3 +6,5 @@ resource "aws_instance" "AnsibleServer" {
 
   tags = {
     "Name" = "Ansible-Server"
+  }
+}
