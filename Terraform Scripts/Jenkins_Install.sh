@@ -68,3 +68,15 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 export PATH
 
 
+#######----To Set Java Home in Ubuntu-------#######
+# to laocate java directory------ find / -name java-17*
+
+# Add environment variable settings to ~/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> ~/.bashrc
+echo 'export M2_HOME=/usr/bin/maven' >> ~/.bashrc
+source ~/.bashrc
+
+$ source /etc/bashrc
+$ echo $JAVA_HOME
+
+
