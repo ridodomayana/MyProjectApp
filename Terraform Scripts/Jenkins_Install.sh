@@ -9,31 +9,41 @@ sudo yum install jenkins -y
 #----------------Install Jenkins-----------------------------
 # Become a root
 sudo su -
-
 # Jenkins repo is added to yum.repos.d
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-
 # Import key from Jenkins
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-
 # Install Java-11
 amazon-linux-extras install java-openjdk17 -y
-
 # Install Jenkins
 yum install jenkins -y
-
 #------Start Jenkins------
 # Become a root, no need to execute if you are alread root.
 sudo su -
-
 # You can enable the Jenkins service to start at boot with the command:
 systemctl enable jenkins
-
 # You can start the Jenkins service with the command:
 systemctl start jenkins
-
 # You can check the status of the Jenkins service using the command:
 systemctl status jenkins
+
+#########--------Install Jenkins on Ubuntu----########
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+openjdk version "17.0.13" 2024-10-15
+OpenJDK Runtime Environment (build 17.0.13+11-Debian-2)
+OpenJDK 64-Bit Server VM (build 17.0.13+11-Debian-2, mixed mode, sharing)
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+############---------------------###################
 
 
 ############------Install Maven & Set Home Path for Java and Maven-----------##############
