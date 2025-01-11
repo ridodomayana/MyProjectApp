@@ -1,5 +1,5 @@
 create a new user: useradd ansadmin
-passwd ansadmin passwd123
+passwd ansadmin 1234
 
 Add to sudo group
 visudo
