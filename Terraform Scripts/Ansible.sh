@@ -46,6 +46,19 @@ webapp/target/*.war
 remove prefix --- webapp/target
 remote directory --- //opt//docker
 
+Download docker inside ansadmin
+cd into docker directory
+sudo yum install docker
+add Docker to ansadmin
+sudo usermod -aG docker ansadmin
+systemctl start docker
+restart the server.
+
+------Create DockerFile---
+vi Dockerfile
+
+
+
 
 
 
