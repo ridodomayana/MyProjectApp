@@ -61,7 +61,7 @@ data "aws_ami" "ubuntu" {
 
     filter {
         name   = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-20.08-amd64-server-*"]
+        values = ["*ubuntu-focal-20.04-amd64-server-*"]
     }
     
     filter {
@@ -69,6 +69,6 @@ data "aws_ami" "ubuntu" {
         values = ["hvm"]
     }
 
-    owners = ["AWS"]
+    owners = ["amazon"]
 }
 
