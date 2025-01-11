@@ -18,6 +18,7 @@ terraform {
       version = "~> 5.0" # Optional but recommended in production
     }
   }
+}
 
   backend "s3" {
     bucket = "project-register-2025"
