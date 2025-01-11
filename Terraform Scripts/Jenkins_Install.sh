@@ -79,4 +79,9 @@ source ~/.bashrc
 $ source /etc/bashrc
 $ echo $JAVA_HOME
 
+sudo gedit jenkins.service in /etc/systemd/system/multi-user.target.wants
+
+Uncomment JAVA_HOME variable in jenkins.service file and set to your JDK directory (in my case /usr/local/bin/jdk-17.0.7)
+
+Environment="JAVA_HOME=/usr/local/bin/jdk-17.0.7"
 
