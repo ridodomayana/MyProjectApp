@@ -63,7 +63,7 @@ COPY ./*.war /usr/local/tomcat/webapps/register.war
 -----Create Ansible Playbook for Docker Task ---
 if config to copy ansadmin ip address
 
-sudo vi /etc/ansible/host
+sudo vi /etc/ansible/hosts
 
 [ansible]
 -input Ansible private IP
