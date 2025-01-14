@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Merciboi - Home Page</title>
+<title>Ridocite - Home Page</title>
 <link href="images/logo2.png" rel="icon">
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to the Merciboi Systems Solutions.</h1>
+<h1 align="center">Welcome to the Ridocite Systems Solutions.</h1>
 <h2 align="center">This is a test application!</h2>
 <h2 align="center">Congratulations for getting to this point. It means your resilience has paid off.
 	Keep working!</h2>
@@ -21,8 +21,8 @@
 <h2 align="center">+Docker +Kubernetes +Amazon Web Services</h2>
 <h2 align="center">...and more</h2>
 <h2 align="center">Learn all these tools and technologies and more at our flexible and highly-personalized 6-month Online DevOps Masterclass and Bootcamp.</h2>
-<h2 align="center">Learn more about <a href="https://www.merciboi.com"></a>Merciboi Systems Solutions.</h2>
-<h2 align="center">Learn more about <a href="https://www.merciboi.com/training"></a>DevOps Training at Merciboi Systems Solutions.</h2>
+<h2 align="center">Learn more about <a href="https://www.ridocite.com"></a>Ridocite Systems Solutions.</h2>
+<h2 align="center">Learn more about <a href="https://www.ridocite.com/training"></a>DevOps Training at Ridocite Systems Solutions.</h2>
 <h2 align="center">Learn DevOps Tools at its best!</h2>
 <hr>
 <div style="text-align: center;">
@@ -30,20 +30,20 @@
 		<img src="images/logo2.png" alt="" width="200">
 	</span>
 	<span style="font-weight: bold;">
-		Merciboi Syytems Solutions, 
-		St. John's, Newfoundland, Canada
-		+1(705) 970-2574,
-		info@merciboi.com
+		Ridocite Sytems Solutions, 
+		St. Charles, Missouri, USA
+		+1(314) 9207727,
+		info@ridocite.com
 		<br>
-		<a href="mailto:info@merciboi.com">Contact Merciboi Systems Solutions</a>
+		<a href="mailto:info@ridocite.com">Contact Ridocite Systems Solutions</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>Merciboi Systems Solutions - Trusted Technical Expertise for your Today and the Future.</p>
-<p align=center><small>Copyrights 2023 by <a href="https://www.merciboi.com/">Merciboi Systems Solutions</a> </small></p>
+<p align=center>Ridocite Systems Solutions - Trusted Technical Expertise for your Today and the Future.</p>
+<p align=center><small>Copyrights 2023 by <a href="https://www.merciboi.com/">Ridocite Systems Solutions</a> </small></p>
 
 </body>
 </html>
