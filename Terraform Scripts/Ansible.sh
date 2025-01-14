@@ -96,6 +96,7 @@ run playbook to test
 create new Jenkins job, Register-CI
 
 
+
 https://www.youtube.com/watch?v=NKUOSc9pCfk
 
 
