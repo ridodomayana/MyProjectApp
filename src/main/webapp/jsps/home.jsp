@@ -32,7 +32,7 @@
 	<span style="font-weight: bold;">
 		Ridocite Sytems Solutions, 
 		St. Charles, Missouri, USA
-		+1(314) 9207727,
+		+1(314) 920-7727,
 		info@ridocite.com
 		<br>
 		<a href="mailto:info@ridocite.com">Contact Ridocite Systems Solutions</a>
