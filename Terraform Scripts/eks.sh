@@ -88,7 +88,16 @@ spec:
   type: LoadBalancer
 
 ===============================Integrate Bootstrap Server with Ansible==================================
+On eks - server
+vi /etc/ssh/ssh_d
+Password required = Yes 
+Then set root password
 $ passwd root
+reload ssh_d
+systemctl reload sshd
+
+
+On Ansible server
 $ nano /etc/ansible/hosts
 [ansible]
 localhost
@@ -117,6 +126,11 @@ $ nano kube_deploy.yml
 
 $ ansible-playbook kube_deploy.yml
 Exec command:ansible-playbook /opt/Docker/kube_deploy.yml
+
+kubectl get nodes
+kubectl get pods
+kubectl get svc
+kubectl get all
 
 ===============================Cleanup==================================
 $ kubectl delete deployment.apps/virtualtechbox-regapp
