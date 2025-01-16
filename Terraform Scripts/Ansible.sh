@@ -51,7 +51,7 @@ cd into docker directory
 sudo yum install docker
 add Docker to ansadmin
 sudo usermod -aG docker ansadmin
-systemctl start docker
+sudo systemctl start docker
 restart the server.
 
 ------Create DockerFile---
@@ -91,9 +91,13 @@ ansible-playbook register-ci.yml --check
 docker login -u rido4good
 -----------------------
 run playbook to test
+ansible-playbook register-ci.yml
 
 #######################---CREATE CI JOB----##########################
 create new Jenkins job, Register-CI
+
+configure post-build action and exec command
+ansible-playbook /opt/docker/regapp-ci.yml
 
 
 
