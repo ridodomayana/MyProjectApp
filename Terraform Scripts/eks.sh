@@ -41,7 +41,7 @@ $ nano regapp-deployment.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: virtualtechbox-regapp
+  name: ridoapp-regapp
   labels:
      app: regapp
 
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: regapp
-        image: ashfaque9x/regapp
+        image: rido4good/regapp
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
