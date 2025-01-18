@@ -26,7 +26,7 @@ Refer==https://github.com/eksctl-io/eksctl/blob/main/README.md#installation
 $ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 $ cd /tmp
 $ sudo mv /tmp/eksctl /bin   OR  $ sudo mv /tmp/eksctl /usr/local/bin
-$ eksctl version
+$ eksctl version ##***If you are unable to get the version with bash:eksctl: command not found error" #run this comand (export PATH=$PATH:/usr/local/bin/)
 
 # Setup Kubernetes using eksctl
 Refer===https://github.com/aws-samples/eks-workshop/issues/734
