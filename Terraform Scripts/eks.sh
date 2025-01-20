@@ -91,6 +91,7 @@ spec:
 On eks - server
 vi /etc/ssh/ssh_d
 Password required = Yes 
+PermitRootLogin = Yes
 Then set root password
 $ passwd root
 reload ssh_d
