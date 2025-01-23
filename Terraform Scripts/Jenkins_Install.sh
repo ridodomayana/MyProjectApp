@@ -85,3 +85,13 @@ Uncomment JAVA_HOME variable in jenkins.service file and set to your JDK directo
 
 Environment="JAVA_HOME=/usr/local/bin/jdk-17.0.7"
 
+
+
+---------------------------------------------------------------------
+
+Plugins to install and Configure when connecting to SonarQube etc
+
+Maven Integration, 
+Pipeline Maven Integration
+Eclipse Temurin Installer
+
