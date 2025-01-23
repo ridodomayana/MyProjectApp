@@ -6,4 +6,22 @@ Copy the token to create a Jenkins Credentials.
 Install Plugins on Jenkins:
 
 Install SonarQube Scanner, Sonar Quality Gates, Quality Gates
-1:06:50
+
+Confiure SonarQube
+Manage Jenkins --> System ---> SonarQube Installations (Give name and use SonarQube http://private IP and Port) ---> use sonarqube created creddentials
+
+Add SonarQube Scanner tools:
+Manage Jenins --> Tools --> SonaerQube Scanner Installations --> Add SOnarQube Scanner --> Give Name, Install Automatically and Save.
+
+Add SonarQube Stage in Jenkinsfile:
+
+Configure SonarQube Webhooks (Without webhooks - Pipeline Job will fail)
+
+Administration -> Configuration -> Webhooks -> Create (Give Name, url = Private IP of JenkinsMaster:8080/*Name of the Webhook/).
+
+Add additional QualityGate Stage on Pipeline JenkinsFile Script for Quality Gate.
+
+*****Install Docker Plugins on Jenkins****
+
+Docker, Docker Commons, Docker Pipeline, Docker API, DOcker Build Step, Cloudbees Docker Build And Push -- Install
+
