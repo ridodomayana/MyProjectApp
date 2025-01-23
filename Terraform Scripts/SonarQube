@@ -1,1 +1,9 @@
+###--- INtegrate SOnar Qube with Jenkins----####
 
+My Account ---> Security ----> Generate Token. (Token Type is Global)
+Copy the token to create a Jenkins Credentials.
+
+Install Plugins on Jenkins:
+
+Install SonarQube Scanner, Sonar Quality Gates, Quality Gates
+1:06:50
