@@ -1,10 +1,19 @@
+sudo apt-get update
+sudo apt-get install docker.io -y
+sudo usermod -aG docker ubuntu
+sudo usermod -aG docker jenkins  
+newgrp docker
+sudo chmod 777 /var/run/docker.sock
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+
+
+
 ###--- INtegrate SOnar Qube with Jenkins----####
 
 My Account ---> Security ----> Generate Token. (Token Type is Global)
 Copy the token to create a Jenkins Credentials.
 
 Install Plugins on Jenkins:
-
 Install SonarQube Scanner, Sonar Quality Gates, Quality Gates
 
 Confiure SonarQube
@@ -17,7 +26,7 @@ Add SonarQube Stage in Jenkinsfile:
 
 Configure SonarQube Webhooks (Without webhooks - Pipeline Job will fail)
 
-Administration -> Configuration -> Webhooks -> Create (Give Name, url = Private IP of JenkinsMaster:8080/*Name of the Webhook/).
+Administration -> Configuration -> Webhooks -> Create (Give Name, http://**url = Private IP of JenkinsMaster:8080/*Name of the Webhook/).
 
 Add additional QualityGate Stage on Pipeline JenkinsFile Script for Quality Gate.
 
