@@ -151,3 +151,86 @@ kubectl get all
 $ kubectl delete deployment.apps/virtualtechbox-regapp
 $ kubectl delete service/virtualtechbox-service
 $ eksctl delete cluster virtualtechbox --region ap-south-1     OR    eksctl delete cluster --region=ap-south-1 --name=virtualtechbox-cluster
+
+
+
+############****CREATE ARGO CD****############
+$ kubectl create namespace argocd
+$ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+$ kubectl get pods -n argocd
+$ curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.4.7/argocd-linux-amd64
+$ chmod +x /usr/local/bin/argocd
+$ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+$ kubectl get svc -n argocd
+$ kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+$ echo XXXXXXX | base64 --decode        #Replace the XXXXX with the password
+
+Login with the LoadBalancer URL
+Username: admin
+Decode Password is the Password
+
+----------------------
+User Info -> Update Password.
+Log out and Log Back in with New Password
+password is : Admin123!
+
+----Add EKS to Argo CD---
+Log into ArgoCd from Cli
+argocd login **url of the argocd load balancer --username admin
+argocd cluster list
+
+Add eks-cluster to the argoCd
+kubectl config get-contexts
+argocd cluster add **name-of-ekscluster(That was gotten from the kubectl config get-contexts) --name **EKS-cluster-name
+argocd cluster list
+
+--------------------------------------------------------
+Connect the Deployment.Yaml file and Service.Yml file in gitops-register-app on GitHubs to ArgoCD
+
+Go to ArgoCd Dashboard --> Settins --> Repository --> COnnect REPO --> VIA HTTPS --> Type = git --> Project = default --> Github url --> Github Usernme and Github token for password --> Connect
+
+Deploy Resources
+NOTE: The name and Image ID in Deployment.yml must match the dockerhub image
+Applications --> New Apps -> name = register-app --> Project Name = default --> Sync Policy = Automatic: Check PRUNE & SELF HEAL --> SOURCE repo url = gitops url --> Revision = HEAD --> Path = ./ 
+
+--> Destination Clusterurl = eks cluster --> namespace = default. (CREATE).
+
+Kubectl get pods
+kubectl get svc to get your external Ip of load balancer. access on port 8080/webapp
+
+----------------------------------------------------------
+
+COnfigure CD job
+This project is parameterized
+String parameter
+name = IMAGE_TAG
+
+Trigger Build Remotely
+Authentication Token = gitops-token
+
+------------------------------
+Set and Define Jenkins API Token 
+Under Jenkins Username --> API Token -- ADD New -- JENKINS_API_TOKEN ---> GENERATE.
+
+Copy the GENERATED TOKEN by highlighing and CTR C - Save on local system
+Use the token to create secret text credentials for Jenkins
+ID = JENKINS_API_TOKEN.
+
+Add JENKINS_API_TOKEN to environement variables on Jenkinsfile
+
+------------------
+Create JenkinsFile in GitOps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
