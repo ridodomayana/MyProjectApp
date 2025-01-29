@@ -222,7 +222,8 @@ Add JENKINS_API_TOKEN to environement variables on Jenkinsfile
 Create JenkinsFile in GitOps
 
 
-
+###########--------------- WHEN Launching the Deployed App ---------------####
+http://a44e2fde83a1249539ae3a60bbac7a1e-1126287126.us-east-2.elb.amazonaws.com:8080/webapp/
 
 
 
