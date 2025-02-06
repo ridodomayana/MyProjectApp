@@ -95,3 +95,9 @@ Maven Integration,
 Pipeline Maven Integration
 Eclipse Temurin Installer
 
+
+------------------------------------------------------
+OWAPS Dependency Checks for Jenkins Server
+
+Install the Plugin on Jenkins
+Tools --> Add Dependency Check --> Give Name --> Install Automatically from github.com
