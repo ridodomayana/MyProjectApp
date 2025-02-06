@@ -100,6 +100,12 @@ configure post-build action and exec command
 ansible-playbook /opt/docker/regapp-ci.yml
 
 
+----------------------------------------------
+Trivy Scan Command
+
+trivy fs . (To scan everything in a directory)
+trivy image *image ID
+
 
 https://www.youtube.com/watch?v=NKUOSc9pCfk
 
