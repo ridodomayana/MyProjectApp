@@ -34,3 +34,7 @@ Add additional QualityGate Stage on Pipeline JenkinsFile Script for Quality Gate
 
 Docker, Docker Commons, Docker Pipeline, Docker API, DOcker Build Step, Cloudbees Docker Build And Push -- Install
 
+
+*****How to create a Project***
+Projects --> Create a Project --> Project Display name --> Project Key and give github branch
+
